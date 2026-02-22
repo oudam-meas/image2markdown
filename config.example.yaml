@@ -1,0 +1,12 @@
+model: "llama3.2-vision"
+prompt: |
+  You are an expert OCR system.
+  Extract all the text from this image and format it into clean, structured Markdown.
+  - Use appropriate Markdown headers (#, ##) based on the visual hierarchy of the text.
+  - Format lists correctly using bullet points or numbers.
+  - If there is tabular data, format it as a standard Markdown table.
+  - Output ONLY the Markdown text. Do not include any conversational filler.
+preprocess:
+  deskew: true
+  denoise: true
+  binarize_method: "otsu"  # "otsu" or "adaptive"
